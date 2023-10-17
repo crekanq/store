@@ -3,16 +3,15 @@ from django.shortcuts import HttpResponseRedirect
 from django.views.generic.base import TemplateView
 from django.views.generic.list import ListView
 
-from common.views import TitleMixin
 from products.models import Basket, Product, ProductCategory
 
 
-class IndexView(TitleMixin, TemplateView):
+class IndexView(TemplateView):
     template_name = 'products/index.html'
     title = 'Store'
 
 
-class ProductsListView(TitleMixin, ListView):
+class ProductsListView(ListView):
     model = Product
     template_name = 'products/products.html'
     paginate_by = 3

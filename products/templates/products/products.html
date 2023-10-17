@@ -1,6 +1,10 @@
 {% extends 'products/base.html' %}
 {% load static cache humanize %}
 
+{% block title %}
+    Продукты
+{% endblock %}
+
 {% block css %}
     <link href="{% static 'vendor/css/products.css' %}" rel="stylesheet">
 {% endblock %}
